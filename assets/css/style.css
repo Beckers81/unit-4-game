@@ -1,0 +1,88 @@
+body {
+    width: 960px;
+    height: 1000px;
+    background-color: rgb(181,223,222);
+        margin-left: 250px;
+        padding: 0;
+        border: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+        
+.titleBox {
+    height: 105px;
+    width: 326px;
+    background-color: rgb(192,121,72);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+#parentTitleBox{
+    margin:35px auto auto 10px;
+}
+#instructionBox{
+    margin-top: 12px;
+    width: 502px;
+    height: 382px;
+    background-color: rgb(250,230,207);
+}
+#parentRanWinsBox{
+    margin:35px 0 0 10px;
+    width:600px;
+    height: 250px;
+}
+.randomNumberBox{
+    margin: -4%;
+    margin-left: -8px;
+    width: 48%;
+    height: 54%;
+    float: left;
+    background-color: rgb(83,201,133);
+}
+.winLoseBox{
+    font-size: 14px;
+    margin-top: -22px;
+    margin-right: 242px;
+    width: 11%;
+    height: 52%;
+    float: right;
+    background-color: rgb(56,254,253);
+    color: rgb(85,199,139)
+
+}
+
+p{
+    font-size: 14px;
+    text-align: center;
+    margin-right: 11%;
+    line-height: 44px;
+}
+div#gameImages {
+    margin-top: -134px;
+}
+
+
+p1 {
+    font-size: 14px;
+    line-height: 2.5;
+    letter-spacing: 3px;
+    word-spacing: 0px;
+   color: rgb(139,180,140);
+   font-weight: bolder;
+}
+/* #parentGameButtons{
+    margin:35px auto auto 10px;
+    height:200px;
+    width: 600px;
+    background-color: orange;
+} */
+
+/* .box{
+    width: 130px;
+    height: 100%;
+    background-color: blue;
+    margin:0 10px 0 10px;
+    float: left;
+} */
