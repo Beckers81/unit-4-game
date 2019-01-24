@@ -1,64 +1,85 @@
-/*select a random number at the start of the game. 
+$( document ).ready(function(){
+     var Random = Math.floor(Math.random()*101+19)
 
-There are 4 crystals below. By clicking on a crystal, you will add a specific amount of points to your total score
+     $('#randomNumberBox').text(Random);
+     var crystalOne = Math.floor(Math.random()*11+1);
+     var crystalTwo = Math.floor(Math.random()*11+1);
+     var crystalThree = Math.floor(Math.random()*11+1);
+     var crystalFour = Math.floor(Math.random()*11+1);
+     var userTotal = 0; 
+     var wins= 0;
+     var losses = 0;
 
-You win the game by matching your total score to random number, you lose the game if your total score goes above this random number.
+   $('#wins').text(wins);
+   $('#loss').text(losses);
+   
+   function reset(){
+         Random = Math.floor(Math.random()*101+19);
+         $('#randomNumberBox').text(Random);
+         crystalOne= Math.floor(Math.random()*11+1);
+         crystalTwo= Math.floor(Math.random()*11+1);
+         crystalThree= Math.floor(Math.random()*11+1);
+         crystalFour= Math.floor(Math.random()*11+1);
+         userTotal= 0;
+         $('#userTotal').text(userTotal);
+         } 
+   function yay(){
+   alert("You won!");
+     wins++; 
+     $('Wins').text(wins);
+     reset();
+   }
+   function loser(){
+   alert ("You lose!");
+     losses++;
+     $('loss').text(losses);
+     reset()
+   }
+     $('#crystalOne').on ('click', function(){
+       userTotal = userTotal + crystalOne;
+       console.log("New userTotal= " + crystalOne);
+       $('#userTotal').text(userTotal); 
+           if (userTotal == Random){
+             yay();
+           }
+           else if ( userTotal > Random){
+             loser();
+           }   
+     })  
+     $('#crystalTwo').on ('click', function(){
+          userTotal = userTotal + crystalTwo;
+          console.log("New userTotal= " + crystalTwo);
+          $('#userTotal').text(userTotal); 
+              if (userTotal == Random){
+                yay();
+              }
+              else if ( userTotal > Random){
+                loser();
+              }   
+        })  
+     $('#crystalThree').on ('click', function(){
+       userTotal = userTotal + crystalThree;
+       console.log("New userTotal= " + userTotal);
+       $('#userTotal').text(userTotal);
 
-The value of each crystal is hidden from you until you click on it
-
-each time when the game starts the game will change the values of each crystal */
-
-// generate 4 random numbers for the 4 crystals
-// return 4 numbers
-
-// var playerScore = 0;
-// var targetScore = Math.floor((Math.random() * 120));
-// const crystals = [{
-//         src: "assets/images/red1.jpg",
-//         value: generateCrystalNumber(),
-//         name: "red"
-//     },
-//     {
-//         src: "assets/images/blue2.jpg",
-//         value: generateCrystalNumber(),
-//         name: "green"
-//     },
-//     {
-//         src: "assets/images/yellow.jpg",
-//         value: generateCrystalNumber(),
-//         name: "yellow"
-//     },
-//     {
-//         src: "assets/images/green1.jpg",
-//         value: generateCrystalNumber(),
-//         name: "green"
-//     }
-// ]
-
-// $(document).ready(function () {
-// startGame()
-
-// });
-// console.log('startGame');
-
-// function startGame(){
-//     for (var i = 0; i < crystals.length; i++){
-        
-//         var crystalButton = $('<img>')
-//         crystalButton.attr('src', crystals[i].src)
-//         crystalButton.attr('value', crystals[i].value)
-//         $('#crystals').append(crystalButton)   
-//     }
-// };
-// $('#crystals').on('click','img', function () {
-
+             if (userTotal == Random){
+             yay();
+           }
+           else if ( userTotal > Random){
+             loser();
+           } 
+     })  
+     $('#crystalFour').on ('click', function(){
+          userTotal = userTotal + crystalFour;
+          console.log("New userTotal= " + userTotal);
+          $('#userTotal').text(userTotal);
+   
+                if (userTotal == Random){
+                yay();
+              }
+              else if ( userTotal > Random){
+                loser();
+              } 
+        })  
+     });   
     
-// })
-// function generateCrystalNumber() {
-
-//     return Math.floor(Math.random() * 12);
-// }
-
-
-
-

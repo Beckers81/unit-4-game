@@ -20,6 +20,7 @@ body {
     color: white;
     font-size: 40px;
     font-weight: bold;
+   
 }
 
 #parentTitleBox {
@@ -33,6 +34,7 @@ body {
     background-color: rgb(250, 230, 207);
     padding-left: 12px;
     padding-right: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #parentRanWinsBox {
@@ -41,7 +43,7 @@ body {
     height: 250px;
 }
 
-.randomNumberBox {
+#randomNumberBox {
     margin: -4%;
     margin-left: -8px;
     width: 48%;
@@ -59,6 +61,7 @@ body {
     float: right;
     background-color: rgb(56, 254, 253);
     color: rgb(85, 199, 139)
+
 }
 
 p {
@@ -66,6 +69,7 @@ p {
     text-align: center;
     margin-right: 11%;
     line-height: 44px;
+    
 }
 
 div#gameImages {
@@ -78,8 +82,10 @@ p1 {
     line-height: 2.5;
     letter-spacing: 3px;
     word-spacing: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(139, 180, 140);
     font-weight: bolder;
+    
 }
 
 .scoreKeeper {
@@ -100,7 +106,7 @@ html {
     margin-top: 17px;
 }
 
-#bottomBox {
+#userTotal {
     width: 281px;
     padding-top: 68px;
     padding-bottom: 45px;
