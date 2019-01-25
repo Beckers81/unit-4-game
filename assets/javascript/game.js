@@ -9,9 +9,11 @@ $( document ).ready(function(){
      var userTotal = 0; 
      var wins= 0;
      var losses = 0;
+    
+
 
    $('#wins').text(wins);
-   $('#loss').text(losses);
+   $('#losses').text(losses);
    
    function reset(){
          Random = Math.floor(Math.random()*101+19);
@@ -25,14 +27,16 @@ $( document ).ready(function(){
          } 
    function yay(){
    alert("You won!");
-     wins++; 
-     $('Wins').text(wins);
+   console.log('wins: ', wins);
+   wins++;
+   console.log('wins: ', wins);
+     $('#wins').text(wins);
      reset();
    }
    function loser(){
    alert ("You lose!");
      losses++;
-     $('loss').text(losses);
+     $('#losses').text(losses);
      reset()
    }
      $('#crystalOne').on ('click', function(){
